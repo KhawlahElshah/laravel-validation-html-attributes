@@ -1,0 +1,13 @@
+{
+    "name": "kalshah/laravel-validation-html-attributes",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Khawlah Alshah",
+            "email": "khawlah_t@yahoo.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
