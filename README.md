@@ -5,6 +5,11 @@ This package comes up with an easy, smart way to pass laravel validation rules t
 ## How it works
 
 The core work is done in a trait `WithHtmlAttributes` which can be added to laravel **FormRequests** 
+
+```php
+    use WithHtmlAttributes;
+```
+
 this trait is responsible of converting the laravel validation rules to the blade files from anywhere in the project, for example:
 
 ```php
