@@ -1,11 +1,16 @@
 {
     "name": "kalshah/laravel-validation-html-attributes",
+    "description": "Use laravel backend validation rules as html validation attributes.",
     "type": "library",
     "license": "MIT",
+    "keywords": [
+        "laravel validation",
+        "html validation attributes",
+    ],
     "authors": [
         {
             "name": "Khawlah Alshah",
-            "email": "khawlah_t@yahoo.com"
+            "email": "khawlah_elshah@gmail.com"
         }
     ],
     "minimum-stability": "dev",
