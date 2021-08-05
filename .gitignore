@@ -1,1 +1,6 @@
-vendor
+/vendor
+/phpunit.xml
+.phpunit.result.cache
+/.vscode
+composer.lock
+composer.phar

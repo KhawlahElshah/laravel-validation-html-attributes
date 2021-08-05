@@ -2,7 +2,6 @@
 
 namespace Kalshah\LaravelValidationHTMLAttirbutes;
 
-
 trait WithHtmlAttributes
 {
     /**
@@ -71,7 +70,7 @@ trait WithHtmlAttributes
     
     public function string()
     {
-        return "type=string";
+        return "type=text";
     }
     
     public function numeric()

@@ -14,10 +14,21 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
+    "prefer-stable": true,
     "autoload": {
         "psr-4": {
             "Kalshah\\LaravelValidationHTMLAttirbutes\\": "src/"
         }
+    },
+     "autoload-dev": {
+        "psr-4": {
+            "Kalshah\\LaravelValidationHTMLAttirbutes\\Tests\\": "tests"
+        }
+    },
+    "require": {
+        "illuminate/http": "^8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
     }
 }
