@@ -2,18 +2,47 @@
 
 This package comes up with an easy, smart way to pass laravel validation rules to html form and use it as client side validation. 
 
+----------
+
+## Installation 
+This Package can be installed via Composer 
+
+```bash
+composer require kalshah/laravel-validation-html-attributes
+```
+
 ## How it works
 
-The core work is done in a trait `WithHtmlAttributes` which can be added to laravel **FormRequests** 
+The core work is done in a trait `WithHtmlAttributes` which can be used in two ways:
+
+
+1- First by using the package request `LaravelValidationToHtmlAttributesRequest` which uses this trait, this suits you if you are validating request in controller methods
+
+```php
+    public function create(LaravelValidationToHtmlAttributesRequest $request)
+    {
+        $request->setRules([
+            'first_name' => 'required'
+        ]);
+        
+        return view('form', ['attributes' => $request->htmlAttributes()]);
+    }
+```
+
+
+2- Second by using the `WithHtmlAttributes` in your **FormRequest**
 
 ```php
     use WithHtmlAttributes;
 ```
 
-this trait is responsible of converting the laravel validation rules to the blade files from anywhere in the project, for example:
+and in your controller you can pass the attributes like so:
 
 ```php
- return view('form', ['attributes' => (new CustomFormRequest)->htmlAttributes()]);
+    public function create()
+    {
+        return view('form', ['attributes' => (new WithHtmlAttributesFormRequest())->htmlAttributes()]);
+    }
 ```
 
 and in the blade files you can access these attributes and add them on html form inputs, like so:
