@@ -21,7 +21,7 @@ trait WithHtmlAttributes
     public function formatRules()
     {
         $htmlAttributes = collect($this->rules())->map(function ($field) {
-            $this->rules = explode('|', $field);
+            $this->rules = is_array($field) ? $field : explode('|', $field);
             
             return array_map(function ($rule) {
                 $ruleArray = explode(':', $rule);

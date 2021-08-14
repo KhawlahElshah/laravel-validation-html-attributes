@@ -125,4 +125,13 @@ class WithHtmlAttributesRequestTest extends TestCase
         
         $this->assertEquals($this->request->htmlAttributes()->link, "type=url");
     }
+
+    function test_it_returns_array_rules_as_html_attribute()
+    {
+        $this->request->setRules([
+            'name' => ['required', 'min:3'],
+        ]);
+
+        $this->assertEquals($this->request->htmlAttributes()->name, "required=required min=3");
+    }
 }
